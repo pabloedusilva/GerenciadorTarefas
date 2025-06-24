@@ -4,27 +4,13 @@ html {
     margin: 0;
     padding: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: linear-gradient(120deg, #f8fafc 0%, #e3e9f7 100%);
-    position: relative;
+    background: #fafdff;
+    color: #232a36;
     overflow-x: hidden;
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 0;
-    background:
-        radial-gradient(circle at 20% 30%, rgba(120, 150, 255, 0.06) 0%, rgba(0, 0, 0, 0) 60%),
-        radial-gradient(circle at 80% 70%, rgba(60, 90, 180, 0.07) 0%, rgba(0, 0, 0, 0) 60%),
-        radial-gradient(circle at 60% 20%, rgba(0, 60, 120, 0.05) 0%, rgba(0, 0, 0, 0) 60%),
-        radial-gradient(circle at 40% 80%, rgba(30, 60, 120, 0.05) 0%, rgba(0, 0, 0, 0) 60%);
-    opacity: 0.5;
-    filter: blur(2.5px);
+    display: none;
 }
 
 .container {
@@ -33,66 +19,67 @@ body::before {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    padding: 3vh 2vw;
+    padding: 2vh 2vw;
     gap: 2vw;
+    background: none;
 }
 
 .retangulo-form,
 .retangulo-tarefas {
-    background: rgba(255,255,255,0.95);
-    border-radius: 18px;
-    box-shadow: 0 6px 32px rgba(60, 90, 180, 0.10), 0 1.5px 4px rgba(0,0,0,0.04);
-    width: 44vw;
-    min-width: 320px;
-    max-width: 520px;
-    height: 80vh;
-    padding: 36px 28px 28px 28px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: none;
+    border: 1px solid #f0f1f4;
+    width: 40vw;
+    min-width: 300px;
+    max-width: 480px;
+    height: 78vh;
+    padding: 28px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     overflow-y: auto;
-    transition: box-shadow 0.2s;
+    transition: border 0.2s;
 }
 
 .retangulo-form:hover,
 .retangulo-tarefas:hover {
-    box-shadow: 0 10px 40px rgba(60, 90, 180, 0.13), 0 2px 8px rgba(0,0,0,0.06);
+    border: 1.5px solid #e3e9f7;
 }
 
 .retangulo-form h2,
 .retangulo-tarefas h2 {
     margin-top: 0;
-    margin-bottom: 18px;
-    color: #1a237e;
+    margin-bottom: 16px;
+    color: #232a36;
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 0.1px;
 }
 
 .retangulo-form label {
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     font-weight: 500;
-    color: #2d3a5a;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+    color: #232a36;
+    font-size: 0.98rem;
 }
 
 .retangulo-form input,
 .retangulo-form textarea,
 .retangulo-form select {
     width: 100%;
-    margin-top: 2px;
-    margin-bottom: 12px;
-    padding: 10px 12px;
-    border: 1.5px solid #e3e9f7;
-    border-radius: 8px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    padding: 9px 10px;
+    border: 1px solid #e3e9f7;
+    border-radius: 6px;
     font-size: 1rem;
-    box-sizing: border-box;
+    background: #fafbfc;
+    transition: border 0.18s;
     font-family: 'Inter', sans-serif;
-    background: #f7faff;
-    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: none;
 }
 
 .retangulo-form input:focus,
@@ -100,53 +87,52 @@ body::before {
 .retangulo-form select:focus {
     border: 1.5px solid #1976d2;
     outline: none;
-    box-shadow: 0 0 0 2px #e3e9f7;
     background: #fff;
 }
 
 .retangulo-form button {
-    margin-top: 12px;
-    padding: 12px 0;
-    background: linear-gradient(90deg, #1976d2 60%, #5c6bc0 100%);
+    margin-top: 10px;
+    padding: 11px 0;
+    background: #1976d2;
     color: #fff;
     border: none;
-    border-radius: 8px;
-    font-size: 1.08rem;
-    font-weight: 600;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: background 0.18s, transform 0.12s;
+    transition: background 0.15s, transform 0.10s;
     font-family: 'Inter', sans-serif;
-    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
-    letter-spacing: 0.2px;
+    box-shadow: none;
+    letter-spacing: 0.1px;
 }
 
 .retangulo-form button:hover {
-    background: linear-gradient(90deg, #125ea8 60%, #3949ab 100%);
-    transform: translateY(-2px) scale(1.03);
+    background: #125ea8;
+    transform: translateY(-1px) scale(1.01);
 }
 
 .log-interno {
-    margin-top: 22px;
-    padding: 16px;
+    margin-top: 16px;
+    padding: 10px;
     background: #f7faff;
-    border: 1.5px solid #e3e9f7;
-    border-radius: 10px;
-    max-height: 140px;
+    border: 1px solid #f0f1f4;
+    border-radius: 7px;
+    max-height: 110px;
     overflow-y: auto;
-    box-shadow: 0 1px 4px rgba(60, 90, 180, 0.04);
+    box-shadow: none;
 }
 
 .log-interno h3 {
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: #5c6bc0;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .log-interno #log {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: #555;
     font-family: 'Inter', monospace;
 }
@@ -157,57 +143,58 @@ body::before {
 }
 
 .tarefa-item {
-    background: #f7faff;
-    border: 1.5px solid #e3e9f7;
-    border-radius: 10px;
-    padding: 18px 16px 14px 16px;
-    margin-bottom: 14px;
-    transition: box-shadow 0.18s, border 0.18s;
-    box-shadow: 0 1px 6px rgba(60, 90, 180, 0.06);
+    background: #fafbfc;
+    border: 1px solid #f0f1f4;
+    border-radius: 8px;
+    padding: 14px 12px 10px 12px;
+    margin-bottom: 10px;
+    transition: border 0.15s;
+    box-shadow: none;
     position: relative;
 }
 
 .tarefa-item:hover {
-    box-shadow: 0 4px 16px rgba(60, 90, 180, 0.10);
     border: 1.5px solid #b3c6f7;
 }
 
 .tarefa-nome {
-    font-weight: 700;
-    color: #1a237e;
-    margin-bottom: 7px;
-    font-size: 1.13rem;
-    letter-spacing: 0.1px;
+    font-weight: 600;
+    color: #232a36;
+    margin-bottom: 5px;
+    font-size: 1.05rem;
+    letter-spacing: 0.05px;
 }
 
 .tarefa-descricao {
     color: #4b5876;
-    margin-bottom: 7px;
-    line-height: 1.5;
-    font-size: 0.98rem;
+    margin-bottom: 5px;
+    line-height: 1.4;
+    font-size: 0.97rem;
 }
 
 .tarefa-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 7px;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
 }
 
 .tarefa-status {
-    padding: 4px 10px;
-    border-radius: 5px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    letter-spacing: 0.1px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.87rem;
+    font-weight: 500;
+    letter-spacing: 0.05px;
+    background: #fafdff;
+    border: 1px solid #e3e9f7;
 }
 
 .status-concluido {
-    background: #e0f7e9;
+    background: #eafaf1;
     color: #1b5e20;
-    border: 1px solid #b2dfdb;
+    border: 1px solid #c8e6c9;
 }
 
 .status-andamento {
@@ -217,15 +204,15 @@ body::before {
 }
 
 .tarefa-data {
-    font-size: 0.88rem;
+    font-size: 0.87rem;
     color: #7b8bb7;
 }
 
 .tarefa-tempo {
-    font-size: 0.88rem;
+    font-size: 0.87rem;
     color: #5c6bc0;
     font-style: italic;
-    margin-top: 2px;
+    margin-top: 1px;
 }
 
 @media (max-width: 768px) {
@@ -236,7 +223,7 @@ body::before {
     }
     .retangulo-form,
     .retangulo-tarefas {
-        width: 96vw;
+        width: 98vw;
         height: 48vh;
         min-width: unset;
         max-width: unset;
@@ -244,41 +231,41 @@ body::before {
 }
 
 .tarefa-acoes {
-    margin-top: 14px;
+    margin-top: 10px;
     display: flex;
     justify-content: flex-end;
-    gap: 8px;
+    gap: 6px;
 }
 
 .btn-concluir {
-    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
-    color: #1a237e;
+    background: #43e97b;
+    color: #232a36;
     border: none;
-    padding: 7px 16px;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 0.93rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: background 0.18s, transform 0.12s;
+    transition: background 0.13s, transform 0.10s;
     font-family: 'Inter', sans-serif;
-    box-shadow: 0 1px 4px rgba(67, 233, 123, 0.08);
+    box-shadow: none;
 }
 
 .btn-concluir:hover {
-    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
-    transform: translateY(-1px) scale(1.04);
+    background: #0db946;
+    transform: translateY(-1px) scale(1.02);
 }
 
 .tarefa-concluida {
     color: #43e97b;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.1px;
+    font-weight: 600;
+    font-size: 0.97rem;
+    letter-spacing: 0.05px;
 }
 
 .tarefa-opiniao {
     color: #5c6bc0;
     font-style: italic;
-    font-size: 0.97rem;
-    margin-top: 6px;
+    font-size: 0.96rem;
+    margin-top: 4px;
 }
